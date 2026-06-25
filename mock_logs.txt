@@ -1,0 +1,27 @@
+2026-06-25 08:12:01,342 [INFO] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2026-06-25 08:12:01,891 [INFO] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-06-25 08:12:02,453 [INFO] o.a.c.c.C.[Tomcat].[localhost].[/]: Initializing Spring embedded WebApplicationContext
+2026-06-25 08:12:02,454 [INFO] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization started
+2026-06-25 08:12:04,912 [INFO] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2026-06-25 08:12:05,118 [WARNING] o.s.b.a.e.mvc.EndpointHandlerMapping: Duplicate handler mapping found for path '/actuator/health' - overriding existing mapping.
+2026-06-25 08:12:06,781 [INFO] c.app.service.DatabaseConnector: Connection pool initialized successfully with 10 active connections.
+2026-06-25 08:15:33,002 [INFO] c.app.controller.UserController: GET /api/v1/users/1042 received from IP 192.168.1.45
+2026-06-25 08:15:33,124 [INFO] c.app.controller.UserController: Response 200 OK sent in 122ms
+2026-06-25 08:22:15,641 [WARNING] c.app.service.AuthService: Failed login attempt for user 'admin_test' from IP 198.51.100.72 (Invalid credentials)
+2026-06-25 08:30:00,005 [INFO] c.app.scheduler.CleanupTask: Scheduled data retention cleanup task started.
+2026-06-25 08:31:12,894 [WARNING] c.app.scheduler.CleanupTask: Soft delete cleanup took longer than threshold (72000ms).
+2026-06-25 08:45:19,233 [INFO] c.app.controller.PaymentController: POST /api/v1/checkout received from IP 192.168.1.99
+2026-06-25 08:45:21,455 [ERROR] c.app.service.PaymentGateway: Connection timeout while trying to reach external processor gateway (api.stripe.com).
+2026-06-25 08:45:21,457 [ERROR] c.app.controller.PaymentController: Internal Server Error (500) returned: Payment gateway unreachable.
+java.net.SocketTimeoutException: connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+2026-06-25 09:02:11,105 [INFO] c.app.controller.UserController: GET /api/v1/users/5512 received from IP 192.168.1.12
+2026-06-25 09:11:44,551 [WARNING] c.app.service.CacheManager: Redis cluster node 172.18.0.4 latency is high (350ms). Re-routing temporary read traffic.
+2026-06-25 09:33:02,019 [INFO] c.app.controller.OrderController: PUT /api/v1/orders/77312/status updated to 'SHIPPED'
+2026-06-25 10:00:15,772 [ERROR] c.app.service.InventoryService: Database update failed for SKU-4412-XL: Deadlock found when trying to get lock; try restarting transaction.
+2026-06-25 10:00:15,810 [INFO] c.app.service.InventoryService: Retrying transaction for SKU-4412-XL (Attempt 1 of 3)
+2026-06-25 10:00:16,114 [INFO] c.app.service.InventoryService: Transaction successful on retry for SKU-4412-XL.
+2026-06-25 10:15:22,889 [WARNING] o.s.b.w.e.tomcat.TomcatWebServer: Maximum HTTP header size exceeded for request from 203.0.113.14
+2026-06-25 11:02:44,112 [INFO] c.app.controller.AuthController: User 'm_smith@domain.com' successfully logged in with MFA.
+2026-06-25 11:14:03,667 [ERROR] c.app.config.PropertyResolver: Mandatory configuration key 'app.security.jwt.secret' missing or blank! System halting.
