@@ -1,6 +1,4 @@
-# project1
-
-## Log Parsing Audit Script
+## Log Parsing Audit System
 
 A Python utility for parsing and analyzing log files with a focus on error and warning events. This script streams logs into a SQLite database and provides hourly analytics reports.
 
